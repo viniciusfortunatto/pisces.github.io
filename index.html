@@ -1,0 +1,645 @@
+<!-- Declara ao navegador que este é um documento HTML5 moderno -->
+<!DOCTYPE html>
+<!-- Define o idioma da página como Português do Brasil, auxiliando SEO e leitores de tela -->
+<html lang="pt-BR">
+<!-- A tag <head> carrega configurações invisíveis na página, como estilos, fontes e metadados -->
+<head>
+  <!-- Garante que caracteres especiais e acentos (ç, ã, é) funcionem perfeitamente -->
+  <meta charset="UTF-8">
+  <!-- Configura a responsividade para que a página se adapte a telas de celulares e tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Define o título que aparece na aba do navegador e nos resultados do Google (Editável) -->
+  <title>Seu Nome ou Nome da Empresa Ltda | Inovação & Excelência</title>
+
+  <!-- ========================================================
+       FOLHAS DE ESTILO (Bootstrap 5.3 + Bootstrap Icons + Google Fonts)
+       ======================================================== -->
+  <!-- Importa o arquivo CSS do framework Bootstrap, responsável por toda a estrutura e layout da página -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Importa a biblioteca de ícones do Bootstrap para usarmos as imagens vetoriais nas seções -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Pré-conecta com os servidores do Google Fonts para carregar as fontes mais rápido -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Importa a fonte 'Inter' do Google Fonts nos pesos 300, 400, 500, 600 e 700 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Importa o seu arquivo CSS personalizado -->
+  <link rel="stylesheet" href="./Assets/styles/style.css">
+</head>
+<!-- A tag body é onde fica todo o conteúdo visível. Os atributos 'data-bs-spy' fazem o menu marcar qual seção está ativa ao rolar a página -->
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar">
+
+  <!-- ========================================================
+       1. BARRA DE NAVEGAÇÃO (NAVBAR)
+       - O link 'Contato' foi retirado da navbar conforme sua instrução.
+       - Contém: Início, Quem somos, Galeria e Localização.
+       ======================================================== -->
+  <!-- Tag de navegação 'nav', fixa no topo ('sticky-top'), fundo escuro ('bg-dark') -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-3">
+    <!-- 'container' centraliza o conteúdo deixando margens nas laterais da tela -->
+    <div class="container">
+      <!-- Marca (Logo) no lado esquerdo do menu. O link '#inicio' faz rolar para o topo -->
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#inicio">
+        <!-- Ícone de diamante do Bootstrap Icons (Altere 'bi-gem' para outro ícone se desejar) -->
+        <i class="bi bi-compass"></i>
+        <!-- Nome da empresa escrito no menu (Editável) -->
+        <span>Pisces Ltda</span>
+      </a>
+
+      <!-- Botão sanduíche (hamburguer) que só aparece em telas menores (celulares) para abrir o menu -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Container dos links do menu. Oculto no mobile, alinhado à direita ('ms-auto') no desktop -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium gap-lg-2">
+          <!-- Item da lista: Link 'Início' apontando para o id '#inicio' -->
+          <li class="nav-item">
+            <a class="nav-link active" href="#inicio">Início</a>
+          </li>
+          <!-- Item da lista: Link 'Quem somos' apontando para o id '#quem-somos' -->
+          <li class="nav-item">
+            <a class="nav-link" href="#quem-somos">Quem somos</a>
+          </li>
+          <!-- Item da lista: Link 'Galeria' apontando para o id '#galeria' -->
+          <li class="nav-item">
+            <a class="nav-link" href="#galeria">Galeria</a>
+          </li>
+          <!-- Item da lista: Link 'Localização' apontando para o id '#localizacao' -->
+          <li class="nav-item">
+            <a class="nav-link" href="#localizacao">Localização</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ========================================================
+       2. BANNER / CABEÇALHO (HERO SECTION)
+       - Logo 200x200 (substitua o atributo 'src' pela sua logo oficial)
+       - Nome da empresa e Slogan em destaque
+       - Botão direcionando para o Fale Conosco (#fale-conosco)
+       ======================================================== -->
+  <!-- Tag header com o id 'inicio' (âncora principal). Centraliza os itens verticalmente com 'd-flex' -->
+  <header id="inicio" class="hero-section d-flex align-items-center">
+    <div class="container py-4">
+      <!-- 'row' cria uma grade. 'gy-4' adiciona espaço entre a imagem e o texto no mobile -->
+      <div class="row align-items-center justify-content-center text-center text-lg-start gy-4">
+        
+        <!-- Coluna da esquerda (ou em cima no mobile) reservada para a Logo (Ocupa 4/12 do espaço da tela) -->
+        <div class="col-lg-4 text-center">
+          <!-- Para colocar a sua logo, troque o link no atributo 'src' pelo endereço ou arquivo da sua imagem -->
+          <img src="C:\Users\06797140579\Desktop\Bootstrap Projeto 2\Assets\imagens\logo.png" 
+               alt="Logotipo 200x200 da Empresa Ltda" 
+               class="rounded-circle hero-logo img-fluid mx-auto" 
+               width="200" 
+               height="200">
+        </div>
+
+        <!-- Coluna da direita (ou em baixo no mobile) com textos e botões (Ocupa 8/12 do espaço da tela) -->
+        <div class="col-lg-8">
+          <!-- Pequena etiqueta ("badge") com visual azul claro logo acima do título (Editável) -->
+          <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mb-3 text-uppercase fw-semibold">
+            Beleza & Qualidade
+          </span>
+          <!-- Título principal enorme ('display-4') (Editável) -->
+          <h1 class="display-4 fw-bold mb-3 text-white">Peixes Ornamentais</h1>
+          <!-- Parágrafo de descrição principal / slogan da empresa (Editável) -->
+          <p class="lead text-light mb-4 opacity-75">
+            Peixes ornamentais selecionados para transformar aquários em verdadeiros espetáculos de beleza e vida. Qualidade, variedade e cuidado para quem compartilha a paixão pelo mundo aquático.
+          </p>
+          <!-- Grupo de botões com espaço entre eles ('gap-3') -->
+          <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+            <!-- Botão principal apontando para a seção fale-conosco -->
+            <a href="#fale-conosco" class="btn btn-primary btn-lg rounded-pill px-4 shadow">
+              <i class="bi bi-chat-dots-fill me-2"></i>Fale Conosco
+            </a>
+            <!-- Botão secundário vazado ('btn-outline-light') apontando para quem somos -->
+            <a href="#quem-somos" class="btn btn-outline-light btn-lg rounded-pill px-4">
+              Saiba Mais
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================
+       3. SEÇÃO: QUEM SOMOS
+       - História, missão da empresa e 3 pilares de destaque
+       ======================================================== -->
+  <!-- O id 'quem-somos' permite que o link do menu encontre esta parte da página. Fundo levemente cinza ('bg-light') -->
+  <section id="quem-somos" class="bg-light">
+    <div class="container">
+      <!-- Bloco que contém o título centralizado da seção -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-dark">Quem Somos</h2>
+        <!-- Subtítulo / Apoio de texto (Editável) -->
+        <p class="text-secondary">A PISCES nasceu da paixão pelo universo aquático e do compromisso em oferecer peixes ornamentais com qualidade, beleza e cuidado. Trabalhamos para proporcionar uma experiência especial a cada cliente, conectando pessoas à diversidade e ao encanto da vida aquática.
+        Nossa dedicação está presente em cada detalhe, desde a seleção dos peixes até a busca constante pela excelência no atendimento. Acreditamos que cada aquário é um ambiente único, capaz de transmitir tranquilidade, beleza e personalidade.
+        Mais do que oferecer peixes ornamentais, queremos levar vida, cor e encanto para cada ambiente, sempre valorizando o respeito aos animais e a satisfação de nossos clientes.</p>
+        <!-- Chama aquela barrinha azul configurada no CSS da linha 116 -->
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Nova linha (row) dividida ao meio. Um lado texto, outro lado imagem -->
+      <div class="row align-items-center gy-4 mb-5">
+        <!-- Coluna de texto (Metade da tela no Desktop: col-lg-6) -->
+        <div class="col-lg-6">
+          <h3 class="fw-bold mb-3">Dedicação, Conhecimento e Excelência</h3>
+          <p style="text-align: justify;" class="text-secondary leading-relaxed">
+            Na <strong>PISCES,</strong> unimos dedicação, conhecimento e uma estrutura preparada para oferecer o melhor do universo dos peixes ornamentais. Nossa equipe trabalha com atenção e responsabilidade em cada etapa, desde os cuidados diários até a seleção dos peixes.
+            Contamos com ambientes organizados e cuidados específicos para proporcionar condições adequadas de manutenção, saúde e bem-estar dos animais. Nosso compromisso é oferecer qualidade, confiança e uma experiência diferenciada aos nossos clientes.
+          </p>
+          <p style="text-align: justify;" class="text-secondary">
+            Mais do que uma empresa, somos apaixonados pelo mundo aquático e buscamos levar beleza, vida e excelência a cada aquário.
+          </p>
+        </div>
+        <!-- Coluna da imagem ilustrativa (A outra metade da tela) -->
+        <div class="col-lg-6">
+          <!-- Substitua o 'src' pela foto real da sua equipe ou empresa -->
+          <img src="https://placehold.co/600x400/1e293b/ffffff?text=Nossa+Equipe+e+Estrutura" 
+               alt="Equipe da Empresa Ltda" 
+               class="img-fluid rounded-4 shadow-sm w-100">
+        </div>
+      </div>
+
+      <!-- Diferenciais divididos em 3 colunas (4/12 cada coluna = 3 caixas na tela de computadores) -->
+      <div class="row g-4">
+        <!-- Cartão 1: Qualidade -->
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border-0 shadow-sm rounded-4 custom-card text-center text-md-start">
+            <div class="fs-1 text-primary mb-3">
+              <i class="bi bi-shield-check"></i> <!-- Ícone de escudo -->
+            </div>
+            <h4 class="h5 fw-bold mb-2">Qualidade e Cuidado</h4>
+            <p class="text-secondary mb-0">Controle rigoroso em cada etapa, garantindo peixes saudáveis, bem cuidados e de excelente qualidade.</p>
+          </div>
+        </div>
+        <!-- Cartão 2: Atendimento -->
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border-0 shadow-sm rounded-4 custom-card text-center text-md-start">
+            <div class="fs-1 text-primary mb-3">
+              <i class="bi bi-headset"></i> <!-- Ícone de fone -->
+            </div>
+            <h4 class="h5 fw-bold mb-2">Atendimento Especializado</h4>
+            <p class="text-secondary mb-0">Orientação próxima e personalizada para oferecer as melhores soluções em peixes ornamentais.</p>
+          </div>
+        </div>
+        <!-- Cartão 3: Experiência -->
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border-0 shadow-sm rounded-4 custom-card text-center text-md-start">
+            <div class="fs-1 text-primary mb-3">
+              <i class="bi bi-award"></i> <!-- Ícone de prêmio -->
+            </div>
+            <h4 class="h5 fw-bold mb-2">Experiência e Dedicação</h4>
+            <p class="text-secondary mb-0">Conhecimento e paixão pelo universo aquático, proporcionando confiança e satisfação aos nossos clientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       4. SEÇÃO: GALERIA
+       - Grade de fotos com cartões informativos e placeholders editáveis
+       ======================================================== -->
+  <!-- Seção apontada pelo id 'galeria', sem classe de fundo (fica branca por padrão) -->
+  <section id="galeria">
+    <div class="container">
+      <!-- Título da seção (Editável) -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-dark">Galeria</h2>
+        <p class="text-secondary">Veja um resumo dos nossos mais belos exemplares.</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Início da grade de imagens: No celular exibirá 1 por linha, tablet 2, PC 3 por linha -->
+      <div class="row g-4">
+        
+        <!-- Item da Galeria 1 -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden custom-card">
+            <div class="gallery-img-wrapper">
+              <!-- Altere o 'src' para a sua primeira foto da galeria -->
+              <img src="C:\Users\06797140579\Desktop\Bootstrap Projeto 2\Assets\imagens\peixe-palhaço.jfif" alt="Projeto 01" class="img-fluid">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Peixe-palhaço</h5>
+              <p class="text-muted small mb-0">Cores vibrantes e beleza marcante, trazendo vida e alegria ao aquário.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item da Galeria 2 -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden custom-card">
+            <div class="gallery-img-wrapper">
+              <!-- Altere o 'src' para a sua segunda foto -->
+              <img src="C:\Users\06797140579\Desktop\Bootstrap Projeto 2\Assets\imagens\peixe-disco.jfif" alt="Projeto 02" class="img-fluid">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Peixe-disco</h5>
+              <p class="text-muted small mb-0">Uma espécie elegante, conhecida por suas cores intensas e formato característico.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item da Galeria 3 -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden custom-card">
+            <div class="gallery-img-wrapper">
+              <!-- Altere o 'src' para a sua terceira foto -->
+              <img src="C:\Users\06797140579\Desktop\Bootstrap Projeto 2\Assets\imagens\peixe-anjo.jfif" alt="Projeto 03" class="img-fluid">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Peixe-anjo</h5>
+              <p class="text-muted small mb-0">Elegância e delicadeza em um peixe que encanta pelos movimentos e suas nadadeiras.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item da Galeria 4 -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden custom-card">
+            <div class="gallery-img-wrapper">
+              <!-- Altere o 'src' para a sua quarta foto -->
+              <img src="C:\Users\06797140579\Desktop\Bootstrap Projeto 2\Assets\imagens\guppy.jfif" alt="Projeto 04" class="img-fluid">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Guppy</h5>
+              <p class="text-muted small mb-0">Pequeno, colorido e cheio de vida, ideal para aquários cheios de movimento.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item da Galeria 5 -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden custom-card">
+            <div class="gallery-img-wrapper">
+              <!-- Altere o 'src' para a sua quinta foto -->
+              <img src="C:\Users\06797140579\Desktop\Bootstrap Projeto 2\Assets\imagens\betta.jfif" alt="Projeto 05" class="img-fluid">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Betta</h5>
+              <p class="text-muted small mb-0">Destaque pela beleza de suas nadadeiras e pela variedade de cores impressionantes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item da Galeria 6 -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden custom-card">
+            <div class="gallery-img-wrapper">
+              <!-- Altere o 'src' para a sua sexta foto -->
+              <img src="C:\Users\06797140579\Desktop\Bootstrap Projeto 2\Assets\imagens\neon tetra.jfif" alt="Projeto 06" class="img-fluid">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Neon tetra</h5>
+              <p class="text-muted small mb-0">Pequeno e fascinante, reconhecido pelas suas listras azuis e vermelhas brilhantes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       5. SEÇÃO: LOCALIZAÇÃO
+       - Endereço, horários, telefone e mapa incorporado
+       ======================================================== -->
+  <!-- Seção identificada por 'localizacao' (fundo cinza claro) -->
+  <section id="localizacao" class="bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-dark">Nossa Localização</h2>
+        <p class="text-secondary">Venha nos visitar em nossa loja.</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Divide a linha entre as informações de contato (esquerda) e o mapa (direita) -->
+      <div class="row g-4 align-items-stretch">
+        <!-- Coluna de Informações Textuais de Endereço -->
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h3 class="h4 fw-bold text-dark mb-4">Loja Oficial</h3>
+
+              <!-- Bloco 1: O Endereço (Altere com a sua rua e CEP) -->
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <div class="fs-4 text-primary">
+                  <i class="bi bi-geo-alt-fill"></i> <!-- Ícone de pino de mapa -->
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Endereço</h6>
+                  <p class="text-secondary mb-0">                    
+                    R. 30, Qd 31 - LOTE 14 - Cardoso Continuação,<br>
+                    Aparecida de Goiânia - GO,<br> 
+                    CEP: 74805-180
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bloco 2: Horário de funcionamento (Altere com o seu expediente) -->
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <div class="fs-4 text-primary">
+                  <i class="bi bi-clock-fill"></i> <!-- Ícone de relógio -->
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Horário de Atendimento</h6>
+                  <p class="text-secondary mb-0">
+                    Segunda a Sexta: 07:00 às 22:00.<br>
+                    Sábados: Fechado.<br>
+                    Domingos: Fechado.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bloco 3: Contatos telefônicos -->
+              <div class="d-flex align-items-start gap-3">
+                <div class="fs-4 text-primary">
+                  <i class="bi bi-telephone-fill"></i> <!-- Ícone de telefone fixo -->
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Central Telefônica</h6>
+                  <p class="text-secondary mb-0">
+                    (62) 3284-7959<br>
+                    (62) 3284-7959
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botão para abrir o GPS. Substitua o link de 'href' pelo link do seu endereço no Google Maps -->
+            <div class="mt-4 pt-3 border-top">
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary rounded-pill w-100">
+                <i class="bi bi-box-arrow-up-right me-2"></i> Abrir Rota no Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna contendo Mapa Google Maps Incorporado (Embed) -->
+        <div class="col-lg-7">
+          <div class="map-container shadow-sm">
+            <!-- Para trocar o mapa, vá no Google Maps, pesquise seu endereço, clique em Compartilhar -> Incorporar um mapa, copie o link dentro de src="..." e substitua aqui abaixo -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.1868009776204!2d-49.3179515!3d-16.767379400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935efd460a879b77%3A0x39659b00ca7e940d!2sPEIXES%20E%20PLANTAS%20peixes%20ornamentais!5e0!3m2!1spt-BR!2sbr!4v1794529010751!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       6. SEÇÃO: FALE CONOSCO (CONTATO) - BEM DESTACADA
+       - Id: fale-conosco (alvo do botão do banner)
+       - Painel informativo com canais diretos (E-mail, Whats, Fone)
+       - Formulário completo com feedback visual via JavaScript
+       ======================================================== -->
+  <!-- Seção ancorada pelo id 'fale-conosco', acionada principalmente pelos botões do início -->
+  <section id="fale-conosco" class="bg-white">
+    <div class="container">
+      
+      <!-- Cabeçalho da Seção (Editável) -->
+      <div class="text-center mb-5">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 text-uppercase fw-semibold mb-2">
+          Atendimento Direto
+        </span>
+        <h2 class="display-6 fw-bold text-dark mt-2">Fale Conosco</h2>
+        <p class="text-secondary max-w-xl mx-auto">
+          Pronto para adquirir um exemplar? Envie sua mensagem pelo formulário ou escolha um de nossos canais diretos.
+        </p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Cartão Lateral: Canais Rápidos (Fundo Preto 'bg-dark') -->
+        <div class="col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-white bg-dark">
+            <h4 class="fw-bold mb-4 text-white">Canais de Atendimento</h4>
+            
+            <!-- Link do WhatsApp: Substitua o número '6232847959' na URL do href e o texto visível -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="bg-primary bg-opacity-25 p-3 rounded-circle text-primary fs-4">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <div>
+                <small class="text-white-50 d-block">WhatsApp Comercial</small>
+                <a href="https://wa.me/6232847959" target="_blank" rel="noopener noreferrer" class="text-white fw-bold text-decoration-none">
+                  (62) 3284-7959
+                </a>
+              </div>
+            </div>
+
+            <!-- Link de E-mail: Substitua o endereço do 'mailto:' e o texto visível -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="bg-primary bg-opacity-25 p-3 rounded-circle text-primary fs-4">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <small class="text-white-50 d-block">E-mail para Orçamentos</small>
+                <a href="mailto:contato@pisces.com.br" class="text-white fw-bold text-decoration-none">
+                  contato@pisces.com.br
+                </a>
+              </div>
+            </div>
+
+            <!-- Informação de Tempo de Resposta (Informativo, não clicável) -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="bg-primary bg-opacity-25 p-3 rounded-circle text-primary fs-4">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <div>
+                <small class="text-white-50 d-block">Tempo Médio de Resposta</small>
+                <span class="text-white fw-bold">Em até 2 horas úteis</span>
+              </div>
+            </div>
+
+            <!-- Rodapé de segurança do Cartão com aviso de privacidade -->
+            <div class="mt-auto pt-3 border-top border-secondary border-opacity-25">
+              <p class="small text-white-50 mb-0">
+                <i class="bi bi-info-circle me-1"></i> Seus dados são protegidos e tratados de acordo com a LGPD.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5">
+            
+            <!-- Alerta de Sucesso (Inicialmente oculto via 'd-none', será ativado no JavaScript lá no fim) -->
+            <div id="formSuccessAlert" class="alert alert-success d-none rounded-3 shadow-sm mb-4" role="alert">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-check-circle-fill fs-4 me-3"></i>
+                <div>
+                  <h6 class="alert-heading fw-bold mb-1">Mensagem enviada com sucesso!</h6>
+                  <p class="mb-0 small">Obrigado pelo contato. Nossa equipe responderá o seu pedido o mais breve possível.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulário: o atributo 'onsubmit' dispara a função JS 'handleContactSubmit' quando o botão Enviar for clicado -->
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+              <div class="row g-3">
+                
+                <!-- Campo obrigatório: Nome (required) -->
+                <div class="col-md-6">
+                  <label for="nome" class="form-label fw-semibold">Nome Completo *</label>
+                  <input type="text" class="form-control form-control-lg rounded-3 fs-6" id="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <!-- Campo obrigatório: E-mail -->
+                <div class="col-md-6">
+                  <label for="email" class="form-label fw-semibold">E-mail *</label>
+                  <input type="email" class="form-control form-control-lg rounded-3 fs-6" id="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <!-- Campo opcional: Telefone / WhatsApp -->
+                <div class="col-md-6">
+                  <label for="telefone" class="form-label fw-semibold">Telefone / WhatsApp</label>
+                  <input type="tel" class="form-control form-control-lg rounded-3 fs-6" id="telefone" placeholder="(62) 3284-7959">
+                </div>
+
+                <!-- Campo obrigatório: Seleção do Assunto da Mensagem -->
+                <div class="col-md-6">
+                  <label for="assunto" class="form-label fw-semibold">Assunto *</label>
+                  <!-- 'select' cria o menu suspenso de escolhas -->
+                  <select class="form-select form-select-lg rounded-3 fs-6" id="assunto" required>
+                    <option value="" disabled selected>Selecione o motivo...</option> <!-- Opção desativada inicial -->
+                    <option value="Orcamento">Solicitar Orçamento</option>
+                    <option value="Duvida">Dúvidas Gerais</option>
+                    <option value="Parceria">Proposta de Parceria</option>
+                    <option value="Outro">Outro assunto</option>
+                  </select>
+                </div>
+
+                <!-- Campo obrigatório: Área extensa para a mensagem do cliente (textarea) -->
+                <div class="col-12">
+                  <label for="mensagem" class="form-label fw-semibold">Sua Mensagem *</label>
+                  <!-- O atributo 'rows="4"' determina a altura visual inicial da caixa (4 linhas) -->
+                  <textarea class="form-control form-control-lg rounded-3 fs-6" id="mensagem" rows="4" placeholder="Conte-nos como podemos te ajudar..." required></textarea>
+                </div>
+
+                <!-- Botão de Envio (tipo submit envia o formulário e ativa a verificação de campos obrigatórios) -->
+                <div class="col-12 text-end mt-4">
+                  <button type="submit" id="submitBtn" class="btn btn-primary btn-lg rounded-pill px-5 shadow-sm">
+                    <i class="bi bi-send-fill me-2"></i> Enviar Mensagem
+                  </button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       7. RODAPÉ (FOOTER)
+       - Texto exato: © 2026 - O Seu Nome ou Nome da Empresa Ltda - Todos os direitos reservados
+       ======================================================== -->
+  <!-- Tag semântica footer para parte final do documento -->
+  <footer class="bg-dark text-white py-4 border-top border-secondary border-opacity-25">
+    <div class="container">
+      <div class="row align-items-center justify-content-between gy-3 text-center text-md-start">
+        
+        <!-- Bloco de direitos autorais (Editável) -->
+        <div class="col-md-8">
+          <p class="mb-0 text-white-50">
+            &copy; 2026 - Pisces Ltda - Todos os direitos reservados
+          </p>
+        </div>
+
+        <!-- Ícones de links sociais (Altere os # pelos links das suas redes sociais) -->
+        <div class="col-md-4 text-md-end">
+          <a href="#inicio" class="text-white-50 text-decoration-none me-3" title="Instagram">
+            <i class="bi bi-instagram fs-5"></i>
+          </a>
+          <a href="#inicio" class="text-white-50 text-decoration-none me-3" title="LinkedIn">
+            <i class="bi bi-linkedin fs-5"></i>
+          </a>
+          <a href="#inicio" class="text-white-50 text-decoration-none me-3" title="Facebook">
+            <i class="bi bi-facebook fs-5"></i>
+          </a>
+          <!-- Ícone atalho que faz rolar a página toda até o topo (#inicio) -->
+          <a href="#inicio" class="text-white-50 text-decoration-none" title="Voltar ao início">
+            <i class="bi bi-arrow-up-circle fs-5 text-primary"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       SCRIPTS: Bootstrap Bundle & Manipulação do Formulário
+       ======================================================== -->
+  <!-- Importa os recursos funcionais (Javascript) do Bootstrap para fazer botões, menus e alertas funcionarem -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Início das funções interativas específicas criadas para a sua página -->
+  <script>
+    // ESTA PARTE FECHA O MENU AUTOMATICAMENTE AO CLICAR EM UM LINK NO CELULAR
+    const navLinks = document.querySelectorAll('.nav-link');  // Seleciona todos os links do menu superior
+    const menuToggle = document.getElementById('navMenu');    // Seleciona a caixa que contém os links (o menu aberto)
+    const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false }); // Prepara a função de fechar do Bootstrap
+
+    // Adiciona uma ordem a cada link do menu:
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        // Se a tela for menor que 992px (celular/tablet) e o menu estiver aberto ('show')...
+        if (window.innerWidth < 992 && menuToggle.classList.contains('show')) {
+          bsCollapse.hide(); // ...ele esconde o menu automaticamente
+        }
+      });
+    });
+
+    // ESTA PARTE GERENCIA O ENVIO DO FORMULÁRIO (Efeito de botão carregando)
+    function handleContactSubmit(event) {
+      event.preventDefault(); // Impede a tela de piscar/recarregar ao clicar no botão "Enviar"
+      
+      // Captura os elementos HTML pelo seus 'id'
+      const submitBtn = document.getElementById('submitBtn');       // O botão de envio
+      const alertBox = document.getElementById('formSuccessAlert'); // A caixa de sucesso verde
+      const form = document.getElementById('contactForm');          // O formulário inteiro
+
+      // Desativa o botão temporariamente para o cliente não clicar duas vezes e adiciona "Enviando..."
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...';
+
+      // 'setTimeout' cria uma simulação (delay). Neste caso, espera 1 segundo (1000 milissegundos) simulando o servidor processar.
+      setTimeout(() => {
+        // Restaura o botão ao normal
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="bi bi-send-fill me-2"></i> Enviar Mensagem';
+        
+        // Remove a classe 'd-none' (display-none) para mostrar a caixa verde de sucesso na tela
+        alertBox.classList.remove('d-none');
+        // Esvazia todos os textos digitados no formulário
+        form.reset();
+
+        // Rola a tela suavemente para a pessoa ter certeza que a caixa verde apareceu caso esteja longe da visão
+        alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Conta 7 segundos (7000ms) e então esconde (add 'd-none') a caixa verde novamente
+        setTimeout(() => {
+          alertBox.classList.add('d-none');
+        }, 7000);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

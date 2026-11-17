@@ -1,0 +1,110 @@
+/* ========================================================
+   ESTILOS PERSONALIZADOS E VARIÁVEIS
+   ======================================================== -->
+*/
+/* :root armazena variáveis de cor globais. Para mudar as cores do site, altere os códigos HEX aqui */
+:root {
+  --primary-color: #0d6efd; /* Cor principal (Azul) */
+  --heading-color: #0f172a; /* Cor dos títulos (Azul marinho muito escuro) */
+  --text-muted: #64748b;    /* Cor de textos secundários (Cinza azulado) */
+  --bg-soft: #f8fafc;       /* Cor de fundos claros */
+}
+
+/* Estiliza o corpo inteiro da página */
+body {
+  font-family: 'Inter', sans-serif; /* Define a fonte 'Inter' para todos os textos */
+  color: #334155;                   /* Define a cor padrão do texto */
+  background-color: #ffffff;        /* Define o fundo branco */
+  scroll-behavior: smooth;          /* Faz a tela deslizar suavemente ao clicar nos links do menu */
+}
+
+/* Espaçamento das seções com compensação para a navbar fixa */
+section {
+  padding: 90px 0;          /* Cria respiro (espaço vazio) em cima e embaixo de cada seção */
+  scroll-margin-top: 75px;  /* Evita que a barra de navegação cubra o título da seção ao rolar a página */
+}
+
+/* 1. Banner / Hero (Estilização específica do cabeçalho principal) */
+.hero-section {
+  /* Fundo com degradê de cores escuras (edite as cores hexadecimais para mudar o tom) */
+  background: linear-gradient(135deg, #0b132b 0%, #1c2541 60%, #3a506b 100%);
+  color: #ffffff;           /* Texto branco para contrastar com o fundo escuro */
+  padding: 100px 0 90px 0;  /* Espaçamento interno (topo, direita, baixo, esquerda) */
+}
+
+/* Estilização da Logo quadrada do banner */
+.hero-logo {
+  width: 200px;             /* Define a largura exata de 200 pixels */
+  height: 200px;            /* Define a altura exata de 200 pixels */
+  object-fit: cover;        /* Garante que a imagem preencha o espaço sem distorcer */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35); /* Aplica uma sombra elegante atrás da logo */
+  border: 4px solid rgba(255, 255, 255, 0.2);  /* Aplica uma borda branca levemente transparente */
+  transition: transform 0.3s ease;             /* Prepara a logo para uma animação suave ao passar o mouse */
+}
+
+/* Efeito aplicado na logo quando o usuário passa o mouse por cima (hover) */
+.hero-logo:hover {
+  transform: scale(1.04);   /* Aumenta o tamanho da logo em 4% criando um leve zoom */
+}
+
+/* 2. Efeito de cartões (Usado nas seções Quem Somos e Galeria) */
+.custom-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease; /* Prepara a animação do cartão */
+  border: 1px solid #e2e8f0;                               /* Adiciona uma borda cinza clara */
+}
+
+/* Efeito de elevação (flutuação) quando o mouse passa sobre o cartão */
+.custom-card:hover {
+  transform: translateY(-6px);                   /* Move o cartão 6 pixels para cima */
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.08);   /* Aumenta a sombra, dando ideia de altura */
+}
+
+/* 3. Galeria (Estilos do container das imagens) */
+.gallery-img-wrapper {
+  position: relative;
+  overflow: hidden;               /* Esconde qualquer parte da imagem que passe das bordas */
+  border-radius: 12px 12px 0 0;   /* Arredonda apenas os cantos superiores do container */
+}
+
+/* Imagens dentro da galeria */
+.gallery-img-wrapper img {
+  transition: transform 0.4s ease; /* Prepara o efeito de zoom na imagem */
+  width: 100%;                     /* Faz a imagem ocupar toda a largura do cartão */
+  height: 240px;                   /* Fixa a altura da imagem para todas ficarem iguais */
+  object-fit: cover;               /* Corta a imagem proporcionalmente para não achatar */
+}
+
+/* Dá zoom apenas na imagem quando o mouse passa sobre o cartão da galeria */
+.custom-card:hover .gallery-img-wrapper img {
+  transform: scale(1.07);          /* Aplica zoom de 7% na foto */
+}
+
+/* 4. Mapa Responsivo (Localização) */
+.map-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;            /* Ocupa 100% da largura da coluna pai */
+  min-height: 380px;      /* Altura mínima de 380 pixels para o mapa */
+  height: 100%;
+  border-radius: 16px;    /* Cantos bem arredondados */
+  border: 1px solid #e2e8f0; /* Borda sutil no container do mapa */
+}
+
+/* Estiliza o frame (janela) do Google Maps */
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;           /* O iframe ocupará 100% do container pai configurado acima */
+  border: 0;              /* Remove bordas nativas do iframe */
+}
+
+/* Linha decorativa colorida que fica abaixo dos títulos das seções */
+.section-divider {
+  width: 50px;                                            /* Largura do traço (50 pixels) */
+  height: 3px;                                            /* Altura/Espessura do traço */
+  background-color: var(--primary-color); /* Puxa a cor principal (azul) definida na linha 20 */
+  margin: 12px auto 0 auto;               /* Centraliza e dá margem acima */
+  border-radius: 4px;                     /* Deixa as pontas do traço arredondadas */
+}
